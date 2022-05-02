@@ -1,11 +1,9 @@
 import React, { useState, createContext, useEffect } from "react";
-import starCard from "../api/starEndpoint";
+import { getCards, starCard } from "../api/service";
 
 export const DataContext = createContext();
 
 export const DataProvider = (props) => {
-  const baseURL = "http://localhost:3001";
-
   const [all, setAll] = useState([]);
   const [animals, setAnimals] = useState([]);
   const [companies, setCompanies] = useState([]);
@@ -26,24 +24,15 @@ export const DataProvider = (props) => {
       (async () => {
         setLoading(true);
 
-        fetch(
-          `${baseURL}/search${
-            searchValue && "?q=" + searchValue
-          }&_page=1&_limit=10`,
-          {
-            method: "GET",
-          }
-        )
-          .then((response) => response.json())
-          .then((result) => {
-            setAll(result);
-            setCompanies(result.filter((r) => r.type === "company"));
-            setAnimals(result.filter((r) => r.type === "animal"));
-            setProducts(result.filter((r) => r.type === "product"));
+        getCards(searchValue, 1, 10).then((result) => {
+          setAll(result);
+          setCompanies(result.filter((r) => r.type === "company"));
+          setAnimals(result.filter((r) => r.type === "animal"));
+          setProducts(result.filter((r) => r.type === "product"));
 
-            setStarred(result.filter((r) => r.starred).length);
-            setLoading(false);
-          });
+          setStarred(result.filter((r) => r.starred).length);
+          setLoading(false);
+        });
       })();
     }
   }, [searchValue]);
