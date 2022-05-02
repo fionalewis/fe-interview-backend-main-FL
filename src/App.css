@@ -112,6 +112,10 @@
   background-color: white;
 }
 
+.content-card:hover {
+  background-color: rgb(219, 219, 219);
+}
+
 .card-title {
   color: white;
   padding: 10px;

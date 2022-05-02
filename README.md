@@ -1,3 +1,15 @@
+# Thought process
+
+I started out by first just haveing a functioning API Service that returned search results. From there I started working on the taskes listed on the Excercise Sheet.
+First by managing to show results on screen.
+Then adding buttons and labels where needed.
+Second I added the starring endpoint, then I added the logic needed to make that, and the counter work.
+I ended by adding styles to everything (even though I also did some of this while coding).
+
+I would have liked to add filtering to show results by type once search is done, like tabs.
+Also would have added more options to the input, maybe by a dropdown to allow more edit to be done before the search.
+And I also would have liked to be able to add pagination.
+
 # fe-interview-backend
 
 This repository contains a local mock backend server for the brightwheel frontend coding challenge as well as an empty React app using `create-react-app`, which you should use as a starting point.
