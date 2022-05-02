@@ -1,5 +1,5 @@
 import React, { useState, createContext, useEffect } from "react";
-import { getCards, starCard } from "../api/service";
+import { getCards, getStarred, starCard } from "../api/service";
 
 export const DataContext = createContext();
 
@@ -20,6 +20,12 @@ export const DataProvider = (props) => {
   };
 
   useEffect(() => {
+    getStarred().then((result) => {
+      setStarred(result.length);
+    });
+  }, []);
+
+  useEffect(() => {
     if (searchValue) {
       (async () => {
         setLoading(true);
@@ -30,7 +36,6 @@ export const DataProvider = (props) => {
           setAnimals(result.filter((r) => r.type === "animal"));
           setProducts(result.filter((r) => r.type === "product"));
 
-          setStarred(result.filter((r) => r.starred).length);
           setLoading(false);
         });
       })();

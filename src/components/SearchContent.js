@@ -12,7 +12,11 @@ const SearchContent = () => {
         <>
           <span className="starred-content">Starred items: {starred}</span>
           <div className="search-results">
-            {all && all.map((c) => <ContentCard key={c.id} content={c} />)}
+            {all.length ? (
+              all.map((c) => <ContentCard key={c.id} content={c} />)
+            ) : (
+              <span>No results found.</span>
+            )}
           </div>
         </>
       )}

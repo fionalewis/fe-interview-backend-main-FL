@@ -9,6 +9,7 @@ I ended by adding styles to everything (even though I also did some of this whil
 I would have liked to add filtering to show results by type once search is done, like tabs.
 Also would have added more options to the input, maybe by a dropdown to allow more edit to be done before the search.
 And I also would have liked to be able to add pagination.
+Would have also liked to add an error boundary.
 
 # fe-interview-backend
 

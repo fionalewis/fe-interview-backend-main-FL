@@ -9,6 +9,12 @@ const getCards = (value, page, limit) => {
   ).then((response) => response.json());
 };
 
+const getStarred = () => {
+  return fetch(`${baseURL}/search?starred=true`, {
+    method: "GET",
+  }).then((response) => response.json());
+};
+
 const starCard = (id, starred) => {
   return fetch(`${baseURL}/search/${id}`, {
     method: "PUT",
@@ -17,4 +23,4 @@ const starCard = (id, starred) => {
   });
 };
 
-export { starCard, getCards };
+export { starCard, getCards, getStarred };
