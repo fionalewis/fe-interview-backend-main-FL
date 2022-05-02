@@ -1,0 +1,139 @@
+.App {
+  background-color: whitesmoke;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.header {
+  text-align: center;
+  background-color: green;
+  padding: 1rem;
+  color: white;
+}
+
+.search {
+  border-radius: 10px;
+  padding: 1rem;
+  outline: none;
+  background-color: whitesmoke;
+  width: 90%;
+  border: solid 1px #3f8441;
+}
+
+.form-group > input {
+  padding: 10px 5px;
+}
+
+.search-button {
+  background-color: whitesmoke; /* Green */
+  border: solid 1px #3f8441;
+  color: #3f8441;
+  border-radius: 10px;
+  padding: 8px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.search-button:hover {
+  background-color: #265528; /* Green */
+  border: solid 1px #265528;
+  color: whitesmoke;
+}
+
+.search-content {
+  margin: 1rem;
+  padding: 1rem;
+  height: 100vh;
+}
+
+#search-form {
+  margin: 1rem;
+  display: inline-block;
+  width: 30%;
+  text-align: left;
+}
+
+.starred-content {
+  padding: 10px;
+}
+.starred-card {
+  float: right;
+}
+
+.search-results {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.content-card {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  text-align: left;
+  border: solid 1px gray;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.card-title {
+  color: white;
+  padding: 10px;
+  border-radius: 4px 4px 0 0;
+}
+
+.card-title.product {
+  background-color: darkseagreen;
+}
+
+.card-title.animal {
+  background-color: cadetblue;
+}
+.card-title.company {
+  background-color: mediumaquamarine;
+}
+
+.content-card > span {
+  padding: 10px;
+}
+
+.image {
+  height: 100px;
+  width: 60px;
+}
